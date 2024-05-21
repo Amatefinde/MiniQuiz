@@ -6,9 +6,8 @@ interface ISettings {
 }
 const initialState: ISettings = {
   quizSettings: {
-    manyAnswers: true,
-    onlyOneAnswer: false,
-    numberOfQuestions: 5,
+    type: "multiple",
+    amount: 5,
   },
 };
 
