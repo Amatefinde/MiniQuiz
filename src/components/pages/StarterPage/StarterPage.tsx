@@ -22,7 +22,7 @@ const StarterPage: React.FC = () => {
     dispatch(
       setQuizSettings({
         ...quizSettings,
-        numberOfQuestions: value,
+        amount: value,
       }),
     );
   }
