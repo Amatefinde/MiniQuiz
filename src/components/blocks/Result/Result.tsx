@@ -12,7 +12,7 @@ const Result: React.FC<IResultProps> = ({ question }) => {
   return (
     <Card>
       <Stack direction={"row"} alignItems="center" spacing={1} padding={2}>
-        <div>
+        <div className={"exercise-label"}>
           <ExerciseDifficultyLabel question={question} />
         </div>
         <Typography level={"title-lg"} textAlign={"start"} sx={{ textIndent: "30px" }}>{question.question}</Typography>

@@ -52,7 +52,7 @@ const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
       ))}
       <CardActions sx={{ justifyContent: "flex-end", width: "100%", padding: 0 }}>
         <Stack flex={1}></Stack>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button id="submit-btn" onClick={handleSubmit}>Submit</Button>
       </CardActions>
     </Card>
   );

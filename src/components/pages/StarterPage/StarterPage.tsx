@@ -64,9 +64,10 @@ const StarterPage: React.FC = () => {
               sx={{ flex: 1, textAlign: "right" }}
               size={"sm"}
               variant={"plain"}
+              id={"question-amount-input"}
             />
           </Stack>
-          <Button color="primary" onClick={() => navigate("/sberQuiz/testing")}>Start</Button>
+          <Button id={"start-btn"} color="primary" onClick={() => navigate("/sberQuiz/testing")}>Start</Button>
         </Stack>
       </Sheet>
     </div>
