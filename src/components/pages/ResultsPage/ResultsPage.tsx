@@ -29,7 +29,7 @@ const ResultsPage: React.FC = () => {
   const sortedQuestions = sortQuestions(questions, sortOrder);
 
   return (
-    <Stack sx={{ width: "900px", gap: 2 }}>
+    <Stack sx={{ maxWidth: "900px", gap: 2 }}>
       <Typography level="h2">
         Your results: {score.userScore}/{score.maxScore}
       </Typography>
