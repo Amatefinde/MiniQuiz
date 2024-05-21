@@ -4,6 +4,7 @@ import Radio from '@mui/joy/Radio';
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
 import { setQuizSettings } from "../../store/settings/settingsSlice.ts";
+import { Tooltip } from "@mui/joy";
 
 const ExerciseTypePicker: React.FC = () => {
   const quizSettings = useSelector((state: RootState) => state.setting.quizSettings);
@@ -27,13 +28,16 @@ const ExerciseTypePicker: React.FC = () => {
         name="radio-buttons"
         label="Multiple"
       />
+      <Tooltip title={"Soon!"}>
       <Radio
         checked={quizSettings.type === 'boolean'}
         onChange={handleChange}
         value="boolean"
         name="radio-buttons"
         label="Boolean"
+        disabled
       />
+      </Tooltip>
     </Box>
   );
 }
