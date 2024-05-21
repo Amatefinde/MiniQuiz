@@ -27,12 +27,13 @@ const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
       answer: selectedAnswers.join(", ")
     };
     dispatch(addAnswer(userAnswer));
+    setSelectedAnswers([])
   };
 
 
   return (
     <Card sx={{ alignItems: "start" }}>
-      <Stack direction={"row"} alignItems="center" spacing={1} padding={2}>
+      <Stack direction={"row"} alignItems="center" spacing={2} padding={2}>
         <div>
         <ExerciseDifficultyLabel question={question} />
         </div>
