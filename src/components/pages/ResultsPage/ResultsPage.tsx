@@ -15,10 +15,15 @@ const ResultsPage: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   const handleSortChange = (
-    event: React.SyntheticEvent | null,
-    newValue: "asc" | "desc",
+    _: React.SyntheticEvent | null,
+    newValue: string | null,
   ) => {
-    setSortOrder(newValue)
+    if (newValue == "asc") {
+      setSortOrder(newValue);
+    }
+    if (newValue == "desc") {
+      setSortOrder(newValue);
+    }
   };
 
   const sortedQuestions = sortQuestions(questions, sortOrder);
