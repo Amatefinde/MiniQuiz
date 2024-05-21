@@ -66,7 +66,7 @@ const StarterPage: React.FC = () => {
               variant={"plain"}
             />
           </Stack>
-          <Button color="primary" onClick={() => navigate("/testing")}>Start</Button>
+          <Button color="primary" onClick={() => navigate("/sberQuiz/testing")}>Start</Button>
         </Stack>
       </Sheet>
     </div>

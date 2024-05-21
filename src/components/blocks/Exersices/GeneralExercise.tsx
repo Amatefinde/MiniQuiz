@@ -34,7 +34,7 @@ const GeneralExercise: React.FC = () => {
     <Stack width="600px" gap={2}>
       {exerciseComponent}
       <Stack direction={"row"} gap={1}>
-        <CloseIcon onClick={() => navigate("/")} sx={{ cursor: "pointer" }} />
+        <CloseIcon onClick={() => navigate("/sberQuiz")} sx={{ cursor: "pointer" }} />
         <LinearProgress determinate value={progressPercentage} sx={{
           "--LinearProgress-radius": "20px",
           "--LinearProgress-thickness": "24px"

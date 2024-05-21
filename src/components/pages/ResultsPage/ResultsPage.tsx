@@ -40,7 +40,7 @@ const ResultsPage: React.FC = () => {
       {sortedQuestions.map((question, index) => (
         <Result key={index} question={question} />
       ))}
-      <Button onClick={() => navigate("/")}>Go back</Button>
+      <Button onClick={() => navigate("/sberQuiz")}>Go back</Button>
     </Stack>
   );
 };
