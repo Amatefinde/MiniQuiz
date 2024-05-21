@@ -7,11 +7,15 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../store";
 import { setQuizSettings } from "../../../store/settings/settingsSlice.ts";
 import ExerciseTypePicker from "../../blocks/ExerciseTypePicker.tsx";
+import { useNavigate } from "react-router-dom";
 
 const StarterPage: React.FC = () => {
   const quizSettings = useSelector((state: RootState) => state.setting.quizSettings);
   const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
+
   const maxNumOfQuiz = 30;
+
   function handleNumberOfQuizChange(e: any) {
     let value;
     if (parseInt(e.target.value) > maxNumOfQuiz) {
@@ -62,7 +66,7 @@ const StarterPage: React.FC = () => {
               variant={"plain"}
             />
           </Stack>
-          <Button color="primary">Start</Button>
+          <Button color="primary" onClick={() => navigate("/testing")}>Start</Button>
         </Stack>
       </Sheet>
     </div>
