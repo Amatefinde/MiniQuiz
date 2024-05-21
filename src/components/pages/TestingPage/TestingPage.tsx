@@ -13,7 +13,7 @@ const TestingPage: React.FC = () => {
   const questions = useSelector((state: RootState) => state.questions.questions);
   const currentQuestionIdx = useSelector((state: RootState) => state.questions.currentQuestionIdx);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [errorStatus, setErrorStatus] = useState<undefined | number>(false);
+  const [errorStatus, setErrorStatus] = useState<undefined | number>();
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
