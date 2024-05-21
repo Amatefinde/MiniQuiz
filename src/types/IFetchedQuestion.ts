@@ -1,4 +1,4 @@
-export default interface IQuizQuestion {
+export default interface IFetchedQuestion {
   type: string;
   difficulty: string;
   category: string;
