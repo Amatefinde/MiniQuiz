@@ -9,12 +9,12 @@ import TestingPage from "./components/pages/TestingPage/TestingPage.tsx";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/sberQuiz",
       element: <StarterPage />,
       errorElement: <h1>Not found 404</h1>,
     },
     {
-      path: "/testing",
+      path: "/sberQuiz/testing",
       element: (
           <TestingPage/>
       ),
