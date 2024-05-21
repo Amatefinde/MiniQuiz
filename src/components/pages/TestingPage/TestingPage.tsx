@@ -6,6 +6,7 @@ import { CircularProgress, Typography } from "@mui/joy";
 import axios from "axios";
 import { setQuestions } from "../../../store/questions/questionsSlice.ts";
 import GeneralExercise from "../../blocks/Exersices/GeneralExercise.tsx";
+import ResultsPage from "../ResultsPage/ResultsPage.tsx";
 
 const TestingPage: React.FC = () => {
   const quizSettings = useSelector((state: RootState) => state.setting.quizSettings);
@@ -45,7 +46,7 @@ const TestingPage: React.FC = () => {
     return <CircularProgress />;
   }
   if (currentQuestionIdx === questions.length) {
-    return <div>Quiz complete</div>;
+    return <ResultsPage/>;
   }
 
   return questions.length > 0 && <GeneralExercise />;
