@@ -1,6 +1,6 @@
-import IQuizQuestion from "./IQuizQuestion.ts";
+import IFetchedQuestion from "./IFetchedQuestion.ts";
 
 export default interface IQuizResponse {
   response_code: number;
-  results: IQuizQuestion[];
+  results: IFetchedQuestion[];
 }
