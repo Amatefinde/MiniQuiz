@@ -12,10 +12,9 @@ export function sortQuestions(
     "hard": 3
   };
 
-  return questions.sort((a, b) => {
+  return [...questions].sort((a, b) => {
     const difficultyA = difficultyOrder[a.difficulty];
     const difficultyB = difficultyOrder[b.difficulty];
-
     if (order === "asc") {
       return difficultyA - difficultyB;
     } else {
