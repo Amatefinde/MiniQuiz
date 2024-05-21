@@ -4,6 +4,7 @@ import { Button, Card, CardActions, Checkbox, Stack, Typography } from "@mui/joy
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../../store";
 import { addAnswer } from "../../../../store/questions/questionsSlice.ts";
+import ExerciseDifficultyLabel from "../../ExerciseDifficultyLabel/ExerciseDifficultyLabel.tsx";
 
 interface IManyAnswersProps {
   question: IQuestion;
@@ -12,6 +13,7 @@ interface IManyAnswersProps {
 const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const dispatch = useDispatch<AppDispatch>();
+
   const handleCheckboxChange = (answer: string) => {
     setSelectedAnswers((prevSelectedAnswers) =>
       prevSelectedAnswers.includes(answer)
@@ -21,17 +23,22 @@ const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
   };
 
   const handleSubmit = () => {
-    console.log("Selected Answers:", selectedAnswers);
     const userAnswer = {
       answer: selectedAnswers.join(", ")
-    }
+    };
     dispatch(addAnswer(userAnswer));
   };
 
 
   return (
-    <Card sx={{ alignItems: "start", maxWidth: "600px" }}>
-      <Typography level={"title-lg"}>{question.question}</Typography>
+    <Card sx={{ alignItems: "start" }}>
+      <Stack direction={"row"} alignItems="center" spacing={1} padding={2}>
+        <div>
+        <ExerciseDifficultyLabel question={question} />
+        </div>
+        <Typography level={"title-lg"} textAlign={"start"} sx={{textIndent: "30px"}}>{question.question}</Typography>
+      </Stack>
+
       {question.answers.map((answer, index) => (
         <div style={{ marginLeft: "20px" }} key={index}>
           <Checkbox
