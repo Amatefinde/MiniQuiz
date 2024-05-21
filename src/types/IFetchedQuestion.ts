@@ -1,6 +1,6 @@
 export default interface IFetchedQuestion {
   type: string;
-  difficulty: string;
+  difficulty: "medium" | "hard" | "easy";
   category: string;
   question: string;
   correct_answer: string;
