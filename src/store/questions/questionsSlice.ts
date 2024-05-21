@@ -30,6 +30,7 @@ const questionsSlice = createSlice({
     addAnswer: (state, action: PayloadAction<IUserAnswer>) => {
       const currentQuestion = state.questions[state.currentQuestionIdx]
       state.questions[state.currentQuestionIdx] = processUserAnswer(currentQuestion, action.payload)
+      state.currentQuestionIdx++;
     }
   },
 });
