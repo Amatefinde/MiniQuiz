@@ -34,9 +34,6 @@ const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
   return (
     <Card sx={{ alignItems: "start" }}>
       <Stack direction={"row"} alignItems="center" spacing={2} padding={2}>
-        <div>
-        <ExerciseDifficultyLabel question={question} />
-        </div>
         <Typography level={"title-lg"} textAlign={"start"} sx={{textIndent: "30px"}}>{question.question}</Typography>
       </Stack>
 
@@ -50,8 +47,11 @@ const ManyAnswers: React.FC<IManyAnswersProps> = ({ question }) => {
           />
         </div>
       ))}
-      <CardActions sx={{ justifyContent: "flex-end", width: "100%", padding: 0 }}>
-        <Stack flex={1}></Stack>
+      <CardActions sx={{ justifyContent: "flex-end", width: "100%", padding: 0, paddingLeft: 2 }}>
+        <ExerciseDifficultyLabel question={question} />
+        <Stack flex={1}>
+
+        </Stack>
         <Button id="submit-btn" onClick={handleSubmit}>Submit</Button>
       </CardActions>
     </Card>
